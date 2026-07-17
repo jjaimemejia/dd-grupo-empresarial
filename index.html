@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>D&D Grupo Empresarial | Bufete de Abogados y Comercio Minero — Valledupar, Colombia</title>
-  <meta name="description" content="D&D Grupo Empresarial: Bufete de Abogados especializado en Propiedad Intelectual, Derecho Penal, Civil, Laboral y más. División de Explotación y Comercialización de Minerales. 20 años de trayectoria desde Valledupar, Colombia." />
-  <meta name="keywords" content="abogados valledupar, bufete de abogados, propiedad intelectual colombia, comercio de minerales, derecho penal, derecho civil, D&D grupo empresarial" />
+  <meta name="description"
+    content="D&D Grupo Empresarial: Bufete de Abogados especializado en Propiedad Intelectual, Derecho Penal, Civil, Laboral y más. División de Explotación y Comercialización de Minerales. 20 años de trayectoria desde Valledupar, Colombia." />
+  <meta name="keywords"
+    content="abogados valledupar, bufete de abogados, propiedad intelectual colombia, comercio de minerales, derecho penal, derecho civil, D&D grupo empresarial" />
   <meta property="og:title" content="D&D Grupo Empresarial | Bufete de Abogados y Comercio Minero" />
-  <meta property="og:description" content="Liderazgo legal de alcance nacional y comercialización global de recursos minero-energéticos desde Valledupar, Colombia." />
+  <meta property="og:description"
+    content="Liderazgo legal de alcance nacional y comercialización global de recursos minero-energéticos desde Valledupar, Colombia." />
   <meta property="og:type" content="website" />
 
   <!-- Tailwind CSS CDN -->
@@ -78,18 +82,27 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
 
   <!-- FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
   <style>
     /* ── Custom Styles ── */
-    body { font-family: 'Inter', system-ui, sans-serif; }
-    .font-display { font-family: 'Playfair Display', Georgia, serif; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+    }
+
+    .font-display {
+      font-family: 'Playfair Display', Georgia, serif;
+    }
 
     /* Scroll padding for fixed header */
-    html { scroll-padding-top: 90px; }
+    html {
+      scroll-padding-top: 90px;
+    }
 
     /* Marble texture overlay for hero */
     .marble-bg {
@@ -97,14 +110,15 @@
         linear-gradient(135deg, #064E3B 0%, #065F46 30%, #047857 50%, #065F46 70%, #064E3B 100%);
       position: relative;
     }
+
     .marble-bg::before {
       content: '';
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(ellipse at 20% 50%, rgba(255,255,255,0.06) 0%, transparent 50%),
-        radial-gradient(ellipse at 80% 20%, rgba(212,175,55,0.05) 0%, transparent 40%),
-        radial-gradient(ellipse at 60% 80%, rgba(255,255,255,0.04) 0%, transparent 45%);
+        radial-gradient(ellipse at 20% 50%, rgba(255, 255, 255, 0.06) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 20%, rgba(212, 175, 55, 0.05) 0%, transparent 40%),
+        radial-gradient(ellipse at 60% 80%, rgba(255, 255, 255, 0.04) 0%, transparent 45%);
       pointer-events: none;
     }
 
@@ -118,11 +132,12 @@
 
     /* Card hover lift */
     .card-lift {
-      transition: transform 0.35s cubic-bezier(.4,0,.2,1), box-shadow 0.35s cubic-bezier(.4,0,.2,1);
+      transition: transform 0.35s cubic-bezier(.4, 0, .2, 1), box-shadow 0.35s cubic-bezier(.4, 0, .2, 1);
     }
+
     .card-lift:hover {
       transform: translateY(-6px);
-      box-shadow: 0 20px 40px -12px rgba(6,78,59,0.15);
+      box-shadow: 0 20px 40px -12px rgba(6, 78, 59, 0.15);
     }
 
     /* Gold card special */
@@ -130,14 +145,16 @@
       background: linear-gradient(135deg, #FDF8E8 0%, #FAF0C8 50%, #FDF8E8 100%);
       border: 1.5px solid #D4AF37;
     }
+
     .card-gold:hover {
-      box-shadow: 0 20px 40px -12px rgba(212,175,55,0.25);
+      box-shadow: 0 20px 40px -12px rgba(212, 175, 55, 0.25);
     }
 
     /* Timeline connector */
     .timeline-line {
       position: relative;
     }
+
     .timeline-line::before {
       content: '';
       position: absolute;
@@ -147,6 +164,7 @@
       width: 2px;
       background: linear-gradient(to bottom, #064E3B, #D4AF37);
     }
+
     .timeline-line:last-child::before {
       display: none;
     }
@@ -155,6 +173,7 @@
     .nav-link {
       position: relative;
     }
+
     .nav-link::after {
       content: '';
       position: absolute;
@@ -165,6 +184,7 @@
       background: #D4AF37;
       transition: width 0.3s ease, left 0.3s ease;
     }
+
     .nav-link:hover::after {
       width: 100%;
       left: 0;
@@ -175,23 +195,39 @@
       position: relative;
       overflow: hidden;
     }
+
     .mineral-card::after {
       content: '';
       position: absolute;
-      top: 0; left: -100%;
-      width: 50%; height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(212,175,55,0.08), transparent);
+      top: 0;
+      left: -100%;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.08), transparent);
       transition: left 0.6s ease;
     }
+
     .mineral-card:hover::after {
       left: 100%;
     }
 
     /* Custom scrollbar */
-    ::-webkit-scrollbar { width: 8px; }
-    ::-webkit-scrollbar-track { background: #F9FAFB; }
-    ::-webkit-scrollbar-thumb { background: #064E3B; border-radius: 4px; }
-    ::-webkit-scrollbar-thumb:hover { background: #065F46; }
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #F9FAFB;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #064E3B;
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #065F46;
+    }
 
     /* Intersection Observer reveal */
     .reveal-item {
@@ -199,6 +235,7 @@
       transform: translateY(30px);
       transition: opacity 0.7s ease-out, transform 0.7s ease-out;
     }
+
     .reveal-item.visible {
       opacity: 1;
       transform: translateY(0);
@@ -207,8 +244,9 @@
     /* Mobile menu */
     .mobile-menu {
       transform: translateX(100%);
-      transition: transform 0.35s cubic-bezier(.4,0,.2,1);
+      transition: transform 0.35s cubic-bezier(.4, 0, .2, 1);
     }
+
     .mobile-menu.open {
       transform: translateX(0);
     }
@@ -219,6 +257,7 @@
       align-items: center;
       gap: 16px;
     }
+
     .ornament-divider::before,
     .ornament-divider::after {
       content: '';
@@ -234,7 +273,8 @@
   <!-- ═══════════════════════════════════════════════ -->
   <!-- HEADER / NAVEGACIÓN PREMIUM                     -->
   <!-- ═══════════════════════════════════════════════ -->
-  <header id="header" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 transition-shadow duration-300">
+  <header id="header"
+    class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 transition-shadow duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
 
@@ -243,35 +283,47 @@
           <!-- Inline SVG Logo -->
           <div class="w-12 h-12 relative">
             <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
-              <rect x="4" y="4" width="112" height="112" rx="4" fill="white" stroke="#6B7280" stroke-width="3"/>
-              <rect x="10" y="10" width="100" height="100" rx="2" fill="white" stroke="#9CA3AF" stroke-width="1.5"/>
-              <text x="28" y="82" font-family="Georgia, serif" font-weight="700" font-size="62" fill="#86EFAC" opacity="0.7">D</text>
+              <rect x="4" y="4" width="112" height="112" rx="4" fill="white" stroke="#6B7280" stroke-width="3" />
+              <rect x="10" y="10" width="100" height="100" rx="2" fill="white" stroke="#9CA3AF" stroke-width="1.5" />
+              <text x="28" y="82" font-family="Georgia, serif" font-weight="700" font-size="62" fill="#86EFAC"
+                opacity="0.7">D</text>
               <text x="48" y="90" font-family="Georgia, serif" font-weight="700" font-size="62" fill="#064E3B">D</text>
-              <text x="48" y="62" font-family="Georgia, serif" font-weight="600" font-size="22" fill="#6B7280">&amp;</text>
+              <text x="48" y="62" font-family="Georgia, serif" font-weight="600" font-size="22"
+                fill="#6B7280">&amp;</text>
             </svg>
           </div>
           <div class="hidden sm:block">
-            <span class="block text-emerald-950 font-bold text-sm tracking-wider leading-tight">D&amp;D GRUPO EMPRESARIAL</span>
+            <span class="block text-emerald-950 font-bold text-sm tracking-wider leading-tight">D&amp;D GRUPO
+              EMPRESARIAL</span>
             <span class="block text-brand-muted text-xs tracking-wide">Valledupar · Colombia</span>
           </div>
         </a>
 
         <!-- Nav Desktop -->
         <nav class="hidden lg:flex items-center gap-8">
-          <a href="#inicio" class="nav-link text-sm font-medium text-brand-dark hover:text-emerald-950 transition-colors">Inicio</a>
-          <a href="#servicios-legales" class="nav-link text-sm font-medium text-brand-dark hover:text-emerald-950 transition-colors">Servicios Legales</a>
-          <a href="#division-minera" class="nav-link text-sm font-medium text-brand-dark hover:text-emerald-950 transition-colors">División Minera</a>
-          <a href="#trayectoria" class="nav-link text-sm font-medium text-brand-dark hover:text-emerald-950 transition-colors">Trayectoria</a>
-          <a href="#contacto" class="nav-link text-sm font-medium text-brand-dark hover:text-emerald-950 transition-colors">Contacto</a>
+          <a href="#inicio"
+            class="nav-link text-sm font-medium text-brand-dark hover:text-emerald-950 transition-colors">Inicio</a>
+          <a href="#servicios-legales"
+            class="nav-link text-sm font-medium text-brand-dark hover:text-emerald-950 transition-colors">Servicios
+            Legales</a>
+          <a href="#division-minera"
+            class="nav-link text-sm font-medium text-brand-dark hover:text-emerald-950 transition-colors">División
+            Minera</a>
+          <a href="#trayectoria"
+            class="nav-link text-sm font-medium text-brand-dark hover:text-emerald-950 transition-colors">Trayectoria</a>
+          <a href="#contacto"
+            class="nav-link text-sm font-medium text-brand-dark hover:text-emerald-950 transition-colors">Contacto</a>
         </nav>
 
         <!-- CTA + Hamburger -->
         <div class="flex items-center gap-4">
-          <a href="#contacto" class="hidden md:inline-flex items-center gap-2 bg-emerald-950 text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-emerald-900 transition-colors shadow-lg shadow-emerald-950/20">
+          <a href="#contacto"
+            class="hidden md:inline-flex items-center gap-2 bg-emerald-950 text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-emerald-900 transition-colors shadow-lg shadow-emerald-950/20">
             <i class="fas fa-headset text-xs"></i>
             Consulta Inmediata
           </a>
-          <button id="menuToggle" class="lg:hidden p-2 text-brand-dark hover:text-emerald-950 transition-colors" aria-label="Abrir menú">
+          <button id="menuToggle" class="lg:hidden p-2 text-brand-dark hover:text-emerald-950 transition-colors"
+            aria-label="Abrir menú">
             <i class="fas fa-bars text-xl"></i>
           </button>
         </div>
@@ -281,16 +333,25 @@
     <!-- Mobile Menu Overlay -->
     <div id="mobileMenu" class="mobile-menu fixed top-0 right-0 h-full w-72 bg-white shadow-2xl z-50 lg:hidden">
       <div class="p-6">
-        <button id="menuClose" class="absolute top-5 right-5 text-brand-dark hover:text-emerald-950 transition-colors" aria-label="Cerrar menú">
+        <button id="menuClose" class="absolute top-5 right-5 text-brand-dark hover:text-emerald-950 transition-colors"
+          aria-label="Cerrar menú">
           <i class="fas fa-times text-xl"></i>
         </button>
         <div class="mt-12 space-y-1">
-          <a href="#inicio" class="mobile-nav-link block py-3 px-4 text-brand-dark hover:bg-emerald-950/5 hover:text-emerald-950 rounded-lg font-medium transition-colors">Inicio</a>
-          <a href="#servicios-legales" class="mobile-nav-link block py-3 px-4 text-brand-dark hover:bg-emerald-950/5 hover:text-emerald-950 rounded-lg font-medium transition-colors">Servicios Legales</a>
-          <a href="#division-minera" class="mobile-nav-link block py-3 px-4 text-brand-dark hover:bg-emerald-950/5 hover:text-emerald-950 rounded-lg font-medium transition-colors">División Minera</a>
-          <a href="#trayectoria" class="mobile-nav-link block py-3 px-4 text-brand-dark hover:bg-emerald-950/5 hover:text-emerald-950 rounded-lg font-medium transition-colors">Trayectoria</a>
-          <a href="#contacto" class="mobile-nav-link block py-3 px-4 text-brand-dark hover:bg-emerald-950/5 hover:text-emerald-950 rounded-lg font-medium transition-colors">Contacto</a>
-          <a href="#contacto" class="block mt-4 text-center bg-emerald-950 text-white py-3 px-4 rounded-lg font-semibold hover:bg-emerald-900 transition-colors">
+          <a href="#inicio"
+            class="mobile-nav-link block py-3 px-4 text-brand-dark hover:bg-emerald-950/5 hover:text-emerald-950 rounded-lg font-medium transition-colors">Inicio</a>
+          <a href="#servicios-legales"
+            class="mobile-nav-link block py-3 px-4 text-brand-dark hover:bg-emerald-950/5 hover:text-emerald-950 rounded-lg font-medium transition-colors">Servicios
+            Legales</a>
+          <a href="#division-minera"
+            class="mobile-nav-link block py-3 px-4 text-brand-dark hover:bg-emerald-950/5 hover:text-emerald-950 rounded-lg font-medium transition-colors">División
+            Minera</a>
+          <a href="#trayectoria"
+            class="mobile-nav-link block py-3 px-4 text-brand-dark hover:bg-emerald-950/5 hover:text-emerald-950 rounded-lg font-medium transition-colors">Trayectoria</a>
+          <a href="#contacto"
+            class="mobile-nav-link block py-3 px-4 text-brand-dark hover:bg-emerald-950/5 hover:text-emerald-950 rounded-lg font-medium transition-colors">Contacto</a>
+          <a href="#contacto"
+            class="block mt-4 text-center bg-emerald-950 text-white py-3 px-4 rounded-lg font-semibold hover:bg-emerald-900 transition-colors">
             <i class="fas fa-headset mr-2 text-xs"></i>Consulta Inmediata
           </a>
         </div>
@@ -307,8 +368,10 @@
     <!-- Decorative floating elements -->
     <div class="absolute top-20 right-10 opacity-10 animate-float hidden lg:block">
       <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" class="w-32 h-32">
-        <text x="12" y="82" font-family="Georgia, serif" font-weight="700" font-size="62" fill="white" opacity="0.5">D</text>
-        <text x="42" y="90" font-family="Georgia, serif" font-weight="700" font-size="62" fill="#D4AF37" opacity="0.3">D</text>
+        <text x="12" y="82" font-family="Georgia, serif" font-weight="700" font-size="62" fill="white"
+          opacity="0.5">D</text>
+        <text x="42" y="90" font-family="Georgia, serif" font-weight="700" font-size="62" fill="#D4AF37"
+          opacity="0.3">D</text>
       </svg>
     </div>
     <div class="absolute bottom-20 left-10 opacity-5 animate-float hidden lg:block" style="animation-delay: 3s;">
@@ -322,42 +385,58 @@
       <div class="max-w-4xl mx-auto text-center">
         <!-- Emblem -->
         <div class="mb-8 inline-flex items-center justify-center">
-          <svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg" class="w-28 h-28 sm:w-36 sm:h-36 animate-fade-in drop-shadow-2xl">
-            <rect x="6" y="6" width="148" height="148" rx="6" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
-            <rect x="14" y="14" width="132" height="132" rx="3" fill="rgba(255,255,255,0.05)" stroke="rgba(212,175,55,0.4)" stroke-width="1"/>
-            <text x="30" y="108" font-family="Georgia, serif" font-weight="700" font-size="76" fill="rgba(255,255,255,0.35)">D</text>
+          <svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg"
+            class="w-28 h-28 sm:w-36 sm:h-36 animate-fade-in drop-shadow-2xl">
+            <rect x="6" y="6" width="148" height="148" rx="6" fill="rgba(255,255,255,0.1)"
+              stroke="rgba(255,255,255,0.3)" stroke-width="2" />
+            <rect x="14" y="14" width="132" height="132" rx="3" fill="rgba(255,255,255,0.05)"
+              stroke="rgba(212,175,55,0.4)" stroke-width="1" />
+            <text x="30" y="108" font-family="Georgia, serif" font-weight="700" font-size="76"
+              fill="rgba(255,255,255,0.35)">D</text>
             <text x="60" y="118" font-family="Georgia, serif" font-weight="700" font-size="76" fill="white">D</text>
-            <text x="62" y="72" font-family="Georgia, serif" font-weight="600" font-size="26" fill="#D4AF37">&amp;</text>
+            <text x="62" y="72" font-family="Georgia, serif" font-weight="600" font-size="26"
+              fill="#D4AF37">&amp;</text>
           </svg>
         </div>
 
         <!-- Headlines -->
-        <h1 class="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 animate-slide-up">
+        <h1
+          class="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 animate-slide-up">
           D&amp;D: Dos Décadas de Respaldo Jurídico
-          <span class="block mt-2">y <span class="text-gradient-gold" style="-webkit-text-fill-color: #D4AF37;">Solidez Empresarial.</span></span>
+          <span class="block mt-2">y <span class="text-gradient-gold" style="-webkit-text-fill-color: #D4AF37;">Solidez
+              Empresarial.</span></span>
         </h1>
 
-        <p class="text-lg sm:text-xl text-emerald-100/80 max-w-2xl mx-auto mb-10 animate-slide-up font-light" style="animation-delay: 0.2s;">
-          Liderazgo legal de alcance nacional y comercialización global de recursos minero-energéticos desde Valledupar, Colombia.
+        <p class="text-lg sm:text-xl text-emerald-100/80 max-w-2xl mx-auto mb-10 animate-slide-up font-light"
+          style="animation-delay: 0.2s;">
+          Liderazgo legal de alcance nacional y comercialización global de recursos minero-energéticos desde Valledupar,
+          Colombia.
         </p>
 
         <!-- CTA Buttons -->
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 animate-slide-up" style="animation-delay: 0.4s;">
-          <a href="#servicios-legales" class="group flex items-center gap-2 bg-white text-emerald-950 px-8 py-4 rounded-xl font-semibold text-base hover:bg-emerald-50 transition-all duration-300 shadow-xl shadow-black/10 w-full sm:w-auto justify-center">
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 animate-slide-up"
+          style="animation-delay: 0.4s;">
+          <a href="#servicios-legales"
+            class="group flex items-center gap-2 bg-white text-emerald-950 px-8 py-4 rounded-xl font-semibold text-base hover:bg-emerald-50 transition-all duration-300 shadow-xl shadow-black/10 w-full sm:w-auto justify-center">
             <i class="fas fa-gavel text-emerald-700 group-hover:rotate-12 transition-transform"></i>
             Ver Servicios Legales
           </a>
-          <a href="#division-minera" class="group flex items-center gap-2 bg-gold/90 text-emerald-950 px-8 py-4 rounded-xl font-semibold text-base hover:bg-gold transition-all duration-300 shadow-xl shadow-gold/20 w-full sm:w-auto justify-center">
+          <a href="#division-minera"
+            class="group flex items-center gap-2 bg-gold/90 text-emerald-950 px-8 py-4 rounded-xl font-semibold text-base hover:bg-gold transition-all duration-300 shadow-xl shadow-gold/20 w-full sm:w-auto justify-center">
             <i class="fas fa-gem text-emerald-900 group-hover:scale-110 transition-transform"></i>
             Ver División Minera
           </a>
         </div>
 
         <!-- Trust badges -->
-        <div class="mt-16 flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-emerald-200/50 text-xs tracking-widest uppercase animate-slide-up" style="animation-delay: 0.6s;">
+        <div
+          class="mt-16 flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-emerald-200/50 text-xs tracking-widest uppercase animate-slide-up"
+          style="animation-delay: 0.6s;">
           <span class="flex items-center gap-2"><i class="fas fa-shield-halved text-gold/50"></i> 20+ Años</span>
-          <span class="flex items-center gap-2"><i class="fas fa-chart-line text-gold/50"></i> Resultados Probados</span>
-          <span class="flex items-center gap-2"><i class="fas fa-globe-americas text-gold/50"></i> Alcance Nacional</span>
+          <span class="flex items-center gap-2"><i class="fas fa-chart-line text-gold/50"></i> Resultados
+            Probados</span>
+          <span class="flex items-center gap-2"><i class="fas fa-globe-americas text-gold/50"></i> Alcance
+            Nacional</span>
         </div>
       </div>
     </div>
@@ -365,7 +444,7 @@
     <!-- Bottom wave -->
     <div class="absolute bottom-0 left-0 right-0">
       <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full">
-        <path d="M0 40C240 80 480 0 720 40C960 80 1200 0 1440 40V80H0Z" fill="#F9FAFB"/>
+        <path d="M0 40C240 80 480 0 720 40C960 80 1200 0 1440 40V80H0Z" fill="#F9FAFB" />
       </svg>
     </div>
   </section>
@@ -379,7 +458,8 @@
 
       <!-- Section Header -->
       <div class="text-center mb-16 reveal-item">
-        <span class="inline-flex items-center gap-2 text-emerald-700 text-sm font-semibold tracking-widest uppercase mb-4">
+        <span
+          class="inline-flex items-center gap-2 text-emerald-700 text-sm font-semibold tracking-widest uppercase mb-4">
           <span class="w-8 h-px bg-emerald-700"></span>
           Servicios Jurídicos
           <span class="w-8 h-px bg-emerald-700"></span>
@@ -390,7 +470,8 @@
         <p class="text-lg text-brand-muted max-w-2xl mx-auto">
           Asesores y Consultores Jurídicos
         </p>
-        <div class="mt-4 inline-flex items-center gap-3 bg-emerald-950/5 rounded-full px-6 py-2 text-sm text-emerald-900">
+        <div
+          class="mt-4 inline-flex items-center gap-3 bg-emerald-950/5 rounded-full px-6 py-2 text-sm text-emerald-900">
           <i class="fas fa-building text-emerald-700"></i>
           <span><strong>NIT:</strong> 900392652-8</span>
           <span class="text-emerald-700/30">|</span>
@@ -405,56 +486,76 @@
 
         <!-- Derecho Penal -->
         <div class="card-lift reveal-item bg-white rounded-2xl p-8 border border-gray-100 shadow-sm group">
-          <div class="w-14 h-14 bg-emerald-950/5 rounded-xl flex items-center justify-center mb-5 group-hover:bg-emerald-950 transition-colors duration-300">
+          <div
+            class="w-14 h-14 bg-emerald-950/5 rounded-xl flex items-center justify-center mb-5 group-hover:bg-emerald-950 transition-colors duration-300">
             <i class="fas fa-gavel text-xl text-emerald-700 group-hover:text-white transition-colors duration-300"></i>
           </div>
           <h3 class="font-display text-xl font-bold text-emerald-950 mb-2">Derecho Penal</h3>
-          <p class="text-sm text-brand-muted leading-relaxed">Defensa penal estratégica, audiencias en estrados y representación de víctimas con rigor técnico.</p>
+          <p class="text-sm text-brand-muted leading-relaxed">Defensa penal estratégica, audiencias en estrados y
+            representación de víctimas con rigor técnico.</p>
         </div>
 
         <!-- Derecho Civil -->
-        <div class="card-lift reveal-item bg-white rounded-2xl p-8 border border-gray-100 shadow-sm group" style="transition-delay: 0.1s;">
-          <div class="w-14 h-14 bg-emerald-950/5 rounded-xl flex items-center justify-center mb-5 group-hover:bg-emerald-950 transition-colors duration-300">
-            <i class="fas fa-file-contract text-xl text-emerald-700 group-hover:text-white transition-colors duration-300"></i>
+        <div class="card-lift reveal-item bg-white rounded-2xl p-8 border border-gray-100 shadow-sm group"
+          style="transition-delay: 0.1s;">
+          <div
+            class="w-14 h-14 bg-emerald-950/5 rounded-xl flex items-center justify-center mb-5 group-hover:bg-emerald-950 transition-colors duration-300">
+            <i
+              class="fas fa-file-contract text-xl text-emerald-700 group-hover:text-white transition-colors duration-300"></i>
           </div>
           <h3 class="font-display text-xl font-bold text-emerald-950 mb-2">Derecho Civil</h3>
-          <p class="text-sm text-brand-muted leading-relaxed">Litigio civil, contratos, responsabilidad patrimonial y resolución de conflictos comerciales.</p>
+          <p class="text-sm text-brand-muted leading-relaxed">Litigio civil, contratos, responsabilidad patrimonial y
+            resolución de conflictos comerciales.</p>
         </div>
 
         <!-- Derecho Laboral -->
-        <div class="card-lift reveal-item bg-white rounded-2xl p-8 border border-gray-100 shadow-sm group" style="transition-delay: 0.2s;">
-          <div class="w-14 h-14 bg-emerald-950/5 rounded-xl flex items-center justify-center mb-5 group-hover:bg-emerald-950 transition-colors duration-300">
-            <i class="fas fa-briefcase text-xl text-emerald-700 group-hover:text-white transition-colors duration-300"></i>
+        <div class="card-lift reveal-item bg-white rounded-2xl p-8 border border-gray-100 shadow-sm group"
+          style="transition-delay: 0.2s;">
+          <div
+            class="w-14 h-14 bg-emerald-950/5 rounded-xl flex items-center justify-center mb-5 group-hover:bg-emerald-950 transition-colors duration-300">
+            <i
+              class="fas fa-briefcase text-xl text-emerald-700 group-hover:text-white transition-colors duration-300"></i>
           </div>
           <h3 class="font-display text-xl font-bold text-emerald-950 mb-2">Derecho Laboral</h3>
-          <p class="text-sm text-brand-muted leading-relaxed">Asesoría laboral integral, procesos ante jurisdicción ordinaria y reclamaciones administrativas.</p>
+          <p class="text-sm text-brand-muted leading-relaxed">Asesoría laboral integral, procesos ante jurisdicción
+            ordinaria y reclamaciones administrativas.</p>
         </div>
 
         <!-- Familia -->
         <div class="card-lift reveal-item bg-white rounded-2xl p-8 border border-gray-100 shadow-sm group">
-          <div class="w-14 h-14 bg-emerald-950/5 rounded-xl flex items-center justify-center mb-5 group-hover:bg-emerald-950 transition-colors duration-300">
-            <i class="fas fa-people-roof text-xl text-emerald-700 group-hover:text-white transition-colors duration-300"></i>
+          <div
+            class="w-14 h-14 bg-emerald-950/5 rounded-xl flex items-center justify-center mb-5 group-hover:bg-emerald-950 transition-colors duration-300">
+            <i
+              class="fas fa-people-roof text-xl text-emerald-700 group-hover:text-white transition-colors duration-300"></i>
           </div>
           <h3 class="font-display text-xl font-bold text-emerald-950 mb-2">Familia</h3>
-          <p class="text-sm text-brand-muted leading-relaxed">Procesos de custodia, sucesiones, alimentos, divorcios y asuntos de familia con enfoque humano.</p>
+          <p class="text-sm text-brand-muted leading-relaxed">Procesos de custodia, sucesiones, alimentos, divorcios y
+            asuntos de familia con enfoque humano.</p>
         </div>
 
         <!-- Administrativo -->
-        <div class="card-lift reveal-item bg-white rounded-2xl p-8 border border-gray-100 shadow-sm group" style="transition-delay: 0.1s;">
-          <div class="w-14 h-14 bg-emerald-950/5 rounded-xl flex items-center justify-center mb-5 group-hover:bg-emerald-950 transition-colors duration-300">
-            <i class="fas fa-landmark text-xl text-emerald-700 group-hover:text-white transition-colors duration-300"></i>
+        <div class="card-lift reveal-item bg-white rounded-2xl p-8 border border-gray-100 shadow-sm group"
+          style="transition-delay: 0.1s;">
+          <div
+            class="w-14 h-14 bg-emerald-950/5 rounded-xl flex items-center justify-center mb-5 group-hover:bg-emerald-950 transition-colors duration-300">
+            <i
+              class="fas fa-landmark text-xl text-emerald-700 group-hover:text-white transition-colors duration-300"></i>
           </div>
           <h3 class="font-display text-xl font-bold text-emerald-950 mb-2">Administrativo</h3>
-          <p class="text-sm text-brand-muted leading-relaxed">Contratación estatal, licitaciones, acciones de nulidad y actuaciones ante entidades públicas.</p>
+          <p class="text-sm text-brand-muted leading-relaxed">Contratación estatal, licitaciones, acciones de nulidad y
+            actuaciones ante entidades públicas.</p>
         </div>
 
         <!-- Aduanero -->
-        <div class="card-lift reveal-item bg-white rounded-2xl p-8 border border-gray-100 shadow-sm group" style="transition-delay: 0.2s;">
-          <div class="w-14 h-14 bg-emerald-950/5 rounded-xl flex items-center justify-center mb-5 group-hover:bg-emerald-950 transition-colors duration-300">
+        <div class="card-lift reveal-item bg-white rounded-2xl p-8 border border-gray-100 shadow-sm group"
+          style="transition-delay: 0.2s;">
+          <div
+            class="w-14 h-14 bg-emerald-950/5 rounded-xl flex items-center justify-center mb-5 group-hover:bg-emerald-950 transition-colors duration-300">
             <i class="fas fa-ship text-xl text-emerald-700 group-hover:text-white transition-colors duration-300"></i>
           </div>
           <h3 class="font-display text-xl font-bold text-emerald-950 mb-2">Aduanero</h3>
-          <p class="text-sm text-brand-muted leading-relaxed">Regulación aduanera, importaciones, exportaciones y cumplimiento normativo en comercio exterior.</p>
+          <p class="text-sm text-brand-muted leading-relaxed">Regulación aduanera, importaciones, exportaciones y
+            cumplimiento normativo en comercio exterior.</p>
         </div>
       </div>
 
@@ -475,11 +576,13 @@
           <div class="flex-1">
             <div class="flex items-center gap-3 mb-2">
               <h3 class="font-display text-2xl font-bold text-emerald-950">Propiedad Intelectual y Derecho de Autor</h3>
-              <span class="hidden sm:inline-flex items-center gap-1 bg-gold/30 text-gold-dark text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+              <span
+                class="hidden sm:inline-flex items-center gap-1 bg-gold/30 text-gold-dark text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
                 <i class="fas fa-star text-[10px]"></i> Especialidad Insignia
               </span>
             </div>
-            <p class="text-brand-muted mb-5 leading-relaxed">Estructuración legal, protección y defensa de marcas, patentes y fonogramas.</p>
+            <p class="text-brand-muted mb-5 leading-relaxed">Estructuración legal, protección y defensa de marcas,
+              patentes y fonogramas.</p>
           </div>
         </div>
       </div>
@@ -493,7 +596,8 @@
             <div class="absolute bottom-4 right-4"><i class="fas fa-compact-disc text-8xl"></i></div>
             <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
               <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="w-48 h-48">
-                <text x="30" y="130" font-family="Georgia, serif" font-weight="700" font-size="100" fill="white" opacity="0.08">D&amp;D</text>
+                <text x="30" y="130" font-family="Georgia, serif" font-weight="700" font-size="100" fill="white"
+                  opacity="0.08">D&amp;D</text>
               </svg>
             </div>
           </div>
@@ -503,12 +607,15 @@
               <div class="w-10 h-10 bg-gold/20 rounded-lg flex items-center justify-center">
                 <i class="fas fa-trophy text-gold"></i>
               </div>
-              <span class="text-gold font-semibold text-sm tracking-widest uppercase">Caso de Honor — Industria Musical</span>
+              <span class="text-gold font-semibold text-sm tracking-widest uppercase">Caso de Honor — Industria
+                Musical</span>
             </div>
             <blockquote class="text-lg lg:text-xl leading-relaxed text-emerald-50 font-light italic">
-              "Criterio de autoridad indiscutible en la industria musical. Más de una década blindando el patrimonio legal y procesos de grabación de sellos como
+              "Criterio de autoridad indiscutible en la industria musical. Más de una década blindando el patrimonio
+              legal y procesos de grabación de sellos como
               <span class="text-gold font-semibold not-italic">JS Records</span> y
-              <span class="text-gold font-semibold not-italic">OG Music</span>, y asesorando a grandes leyendas de la música:
+              <span class="text-gold font-semibold not-italic">OG Music</span>, y asesorando a grandes leyendas de la
+              música:
               <span class="text-white font-semibold not-italic">Diomedes Díaz</span>,
               <span class="text-white font-semibold not-italic">Omar Geles</span>,
               <span class="text-white font-semibold not-italic">Wilfram Castillo</span>,
@@ -516,16 +623,20 @@
               <span class="text-white font-semibold not-italic">Tico Mercado</span>."
             </blockquote>
             <div class="mt-6 flex flex-wrap gap-3">
-              <span class="inline-flex items-center gap-1.5 bg-white/10 text-emerald-100 text-xs font-medium px-3 py-1.5 rounded-full">
+              <span
+                class="inline-flex items-center gap-1.5 bg-white/10 text-emerald-100 text-xs font-medium px-3 py-1.5 rounded-full">
                 <i class="fas fa-record-vinyl text-gold text-[10px]"></i> JS Records
               </span>
-              <span class="inline-flex items-center gap-1.5 bg-white/10 text-emerald-100 text-xs font-medium px-3 py-1.5 rounded-full">
+              <span
+                class="inline-flex items-center gap-1.5 bg-white/10 text-emerald-100 text-xs font-medium px-3 py-1.5 rounded-full">
                 <i class="fas fa-record-vinyl text-gold text-[10px]"></i> OG Music
               </span>
-              <span class="inline-flex items-center gap-1.5 bg-white/10 text-emerald-100 text-xs font-medium px-3 py-1.5 rounded-full">
+              <span
+                class="inline-flex items-center gap-1.5 bg-white/10 text-emerald-100 text-xs font-medium px-3 py-1.5 rounded-full">
                 <i class="fas fa-shield-halved text-gold text-[10px]"></i> Fonogramas
               </span>
-              <span class="inline-flex items-center gap-1.5 bg-white/10 text-emerald-100 text-xs font-medium px-3 py-1.5 rounded-full">
+              <span
+                class="inline-flex items-center gap-1.5 bg-white/10 text-emerald-100 text-xs font-medium px-3 py-1.5 rounded-full">
                 <i class="fas fa-copyright text-gold text-[10px]"></i> Marcas &amp; Patentes
               </span>
             </div>
@@ -551,13 +662,16 @@
   <!-- ═══════════════════════════════════════════════ -->
   <section id="division-minera" class="py-20 lg:py-28 bg-white relative overflow-hidden">
     <!-- Subtle background pattern -->
-    <div class="absolute inset-0 opacity-[0.02]" style="background-image: url('data:image/svg+xml,<svg width=&quot;60&quot; height=&quot;60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;><path d=&quot;M30 0L60 30L30 60L0 30Z&quot; fill=&quot;none&quot; stroke=&quot;%23064E3B&quot; stroke-width=&quot;0.5&quot;/></svg>'); background-size: 60px 60px;"></div>
+    <div class="absolute inset-0 opacity-[0.02]"
+      style="background-image: url('data:image/svg+xml,<svg width=&quot;60&quot; height=&quot;60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;><path d=&quot;M30 0L60 30L30 60L0 30Z&quot; fill=&quot;none&quot; stroke=&quot;%23064E3B&quot; stroke-width=&quot;0.5&quot;/></svg>'); background-size: 60px 60px;">
+    </div>
 
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
       <!-- Section Header -->
       <div class="text-center mb-16 reveal-item">
-        <span class="inline-flex items-center gap-2 text-gold-dark text-sm font-semibold tracking-widest uppercase mb-4">
+        <span
+          class="inline-flex items-center gap-2 text-gold-dark text-sm font-semibold tracking-widest uppercase mb-4">
           <span class="w-8 h-px bg-gold"></span>
           Sector Minero-Energético
           <span class="w-8 h-px bg-gold"></span>
@@ -577,53 +691,70 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
 
         <!-- Carbón -->
-        <div class="mineral-card card-lift reveal-item bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 border border-gray-100 shadow-sm text-center group">
-          <div class="w-20 h-20 mx-auto bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+        <div
+          class="mineral-card card-lift reveal-item bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 border border-gray-100 shadow-sm text-center group">
+          <div
+            class="w-20 h-20 mx-auto bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
             <i class="fas fa-mountain text-2xl text-amber-400"></i>
           </div>
           <h3 class="font-display text-lg font-bold text-emerald-950 mb-2">Carbón y Carbones Metalúrgicos</h3>
-          <p class="text-sm text-brand-muted">Suministro y comercialización internacional de carbón térmico y metalúrgico de alta calidad.</p>
+          <p class="text-sm text-brand-muted">Suministro y comercialización internacional de carbón térmico y
+            metalúrgico de alta calidad.</p>
         </div>
 
         <!-- Antracita -->
-        <div class="mineral-card card-lift reveal-item bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 border border-gray-100 shadow-sm text-center group" style="transition-delay: 0.1s;">
-          <div class="w-20 h-20 mx-auto bg-gradient-to-br from-gray-700 to-gray-800 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+        <div
+          class="mineral-card card-lift reveal-item bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 border border-gray-100 shadow-sm text-center group"
+          style="transition-delay: 0.1s;">
+          <div
+            class="w-20 h-20 mx-auto bg-gradient-to-br from-gray-700 to-gray-800 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
             <i class="fas fa-fire text-2xl text-orange-400"></i>
           </div>
           <h3 class="font-display text-lg font-bold text-emerald-950 mb-2">Antracita</h3>
-          <p class="text-sm text-brand-muted">Antracita premium de alto poder calorífico para usos industriales y exportación.</p>
+          <p class="text-sm text-brand-muted">Antracita premium de alto poder calorífico para usos industriales y
+            exportación.</p>
         </div>
 
         <!-- Grafito -->
-        <div class="mineral-card card-lift reveal-item bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 border border-gray-100 shadow-sm text-center group" style="transition-delay: 0.2s;">
-          <div class="w-20 h-20 mx-auto bg-gradient-to-br from-zinc-600 to-zinc-800 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+        <div
+          class="mineral-card card-lift reveal-item bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 border border-gray-100 shadow-sm text-center group"
+          style="transition-delay: 0.2s;">
+          <div
+            class="w-20 h-20 mx-auto bg-gradient-to-br from-zinc-600 to-zinc-800 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
             <i class="fas fa-layer-group text-2xl text-zinc-300"></i>
           </div>
           <h3 class="font-display text-lg font-bold text-emerald-950 mb-2">Grafito</h3>
-          <p class="text-sm text-brand-muted">Grafito natural y sintético para aplicaciones tecnológicas e industriales.</p>
+          <p class="text-sm text-brand-muted">Grafito natural y sintético para aplicaciones tecnológicas e industriales.
+          </p>
         </div>
 
         <!-- Cobre -->
-        <div class="mineral-card card-lift reveal-item bg-gradient-to-br from-orange-50/30 to-white rounded-2xl p-8 border border-gray-100 shadow-sm text-center group">
-          <div class="w-20 h-20 mx-auto bg-gradient-to-br from-orange-600 to-orange-800 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+        <div
+          class="mineral-card card-lift reveal-item bg-gradient-to-br from-orange-50/30 to-white rounded-2xl p-8 border border-gray-100 shadow-sm text-center group">
+          <div
+            class="w-20 h-20 mx-auto bg-gradient-to-br from-orange-600 to-orange-800 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
             <i class="fas fa-bolt text-2xl text-orange-200"></i>
           </div>
           <h3 class="font-display text-lg font-bold text-emerald-950 mb-2">Cobre</h3>
-          <p class="text-sm text-brand-muted">Cobre refinado y concentrados para la industria eléctrica y de construcción.</p>
+          <p class="text-sm text-brand-muted">Cobre refinado y concentrados para la industria eléctrica y de
+            construcción.</p>
         </div>
 
         <!-- Oro, Plata y Platino -->
-        <div class="mineral-card card-lift reveal-item sm:col-span-2 lg:col-span-2 bg-gradient-to-br from-gold-50 to-white rounded-2xl p-8 border border-gold/30 shadow-sm group relative overflow-hidden">
+        <div
+          class="mineral-card card-lift reveal-item sm:col-span-2 lg:col-span-2 bg-gradient-to-br from-gold-50 to-white rounded-2xl p-8 border border-gold/30 shadow-sm group relative overflow-hidden">
           <div class="absolute top-4 right-4 opacity-5">
             <i class="fas fa-gem text-7xl text-gold-dark"></i>
           </div>
           <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6 text-center sm:text-left">
-            <div class="w-20 h-20 bg-gradient-to-br from-gold to-gold-dark rounded-2xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-gold/30">
+            <div
+              class="w-20 h-20 bg-gradient-to-br from-gold to-gold-dark rounded-2xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-gold/30">
               <i class="fas fa-gem text-2xl text-white"></i>
             </div>
             <div>
               <h3 class="font-display text-lg font-bold text-emerald-950 mb-2">Oro, Plata y Platino</h3>
-              <p class="text-sm text-brand-muted max-w-lg">Comercialización de metales preciosos con trazabilidad certificada, cumplimiento de normativas internacionales y estándares de responsabilidad minera.</p>
+              <p class="text-sm text-brand-muted max-w-lg">Comercialización de metales preciosos con trazabilidad
+                certificada, cumplimiento de normativas internacionales y estándares de responsabilidad minera.</p>
               <div class="mt-3 flex flex-wrap justify-center sm:justify-start gap-2">
                 <span class="text-xs bg-gold/10 text-gold-dark px-2.5 py-1 rounded-full font-medium">Au · Oro</span>
                 <span class="text-xs bg-gray-100 text-gray-600 px-2.5 py-1 rounded-full font-medium">Ag · Plata</span>
@@ -654,7 +785,8 @@
 
       <!-- Section Header -->
       <div class="text-center mb-16 reveal-item">
-        <span class="inline-flex items-center gap-2 text-emerald-700 text-sm font-semibold tracking-widest uppercase mb-4">
+        <span
+          class="inline-flex items-center gap-2 text-emerald-700 text-sm font-semibold tracking-widest uppercase mb-4">
           <span class="w-8 h-px bg-emerald-700"></span>
           Perfil Corporativo
           <span class="w-8 h-px bg-emerald-700"></span>
@@ -693,14 +825,17 @@
         <!-- Milestone 1 -->
         <div class="timeline-line reveal-item flex gap-6">
           <div class="shrink-0">
-            <div class="w-12 h-12 bg-emerald-950 rounded-xl flex items-center justify-center shadow-lg shadow-emerald-950/20">
+            <div
+              class="w-12 h-12 bg-emerald-950 rounded-xl flex items-center justify-center shadow-lg shadow-emerald-950/20">
               <i class="fas fa-graduation-cap text-white text-sm"></i>
             </div>
           </div>
           <div class="pb-12">
             <span class="text-xs text-gold font-semibold tracking-widest uppercase">Fundamentos</span>
             <h3 class="font-display text-lg font-bold text-emerald-950 mt-1 mb-2">Formación y Origen Profesional</h3>
-            <p class="text-brand-muted leading-relaxed">20 años de destacada trayectoria profesional, iniciada en el Consultorio Jurídico de la Universidad Antonio Nariño, donde se forjaron las bases de un litigio riguroso y comprometido.</p>
+            <p class="text-brand-muted leading-relaxed">20 años de destacada trayectoria profesional, iniciada en el
+              Consultorio Jurídico de la Universidad Antonio Nariño, donde se forjaron las bases de un litigio riguroso
+              y comprometido.</p>
           </div>
         </div>
 
@@ -713,22 +848,29 @@
           </div>
           <div class="pb-12">
             <span class="text-xs text-gold font-semibold tracking-widest uppercase">Litigio Estratégico</span>
-            <h3 class="font-display text-lg font-bold text-emerald-950 mt-1 mb-2">Trayectoria Litigante con Resultados Comprobados</h3>
-            <p class="text-brand-muted leading-relaxed">Amplia experiencia en litigio estratégico en estrados, con demostrada capacidad de argumentación, diseño de estrategia procesal y obtención de resultados favorables para sus clientes en múltiples jurisdicciones.</p>
+            <h3 class="font-display text-lg font-bold text-emerald-950 mt-1 mb-2">Trayectoria Litigante con Resultados
+              Comprobados</h3>
+            <p class="text-brand-muted leading-relaxed">Amplia experiencia en litigio estratégico en estrados, con
+              demostrada capacidad de argumentación, diseño de estrategia procesal y obtención de resultados favorables
+              para sus clientes en múltiples jurisdicciones.</p>
           </div>
         </div>
 
         <!-- Milestone 3 -->
         <div class="timeline-line reveal-item flex gap-6">
           <div class="shrink-0">
-            <div class="w-12 h-12 bg-emerald-950 rounded-xl flex items-center justify-center shadow-lg shadow-emerald-950/20">
+            <div
+              class="w-12 h-12 bg-emerald-950 rounded-xl flex items-center justify-center shadow-lg shadow-emerald-950/20">
               <i class="fas fa-landmark text-white text-sm"></i>
             </div>
           </div>
           <div class="pb-12">
             <span class="text-xs text-gold font-semibold tracking-widest uppercase">Institucional</span>
-            <h3 class="font-display text-lg font-bold text-emerald-950 mt-1 mb-2">Experiencia Institucional de Alto Nivel</h3>
-            <p class="text-brand-muted leading-relaxed">Sólida experiencia institucional en el Fondo Especial de Extinción de Dominio, y como abogado de víctimas y restitución de tierras, actuando como defensor de los derechos fundamentales.</p>
+            <h3 class="font-display text-lg font-bold text-emerald-950 mt-1 mb-2">Experiencia Institucional de Alto
+              Nivel</h3>
+            <p class="text-brand-muted leading-relaxed">Sólida experiencia institucional en el Fondo Especial de
+              Extinción de Dominio, y como abogado de víctimas y restitución de tierras, actuando como defensor de los
+              derechos fundamentales.</p>
           </div>
         </div>
 
@@ -742,7 +884,9 @@
           <div class="pb-0">
             <span class="text-xs text-gold font-semibold tracking-widest uppercase">Visión Global</span>
             <h3 class="font-display text-lg font-bold text-emerald-950 mt-1 mb-2">Dirección Corporativa Global</h3>
-            <p class="text-brand-muted leading-relaxed">Visión corporativa global como director jurídico de D&amp;D Explotación y Comercialización de Minerales S.A.S., liderando la estructuración legal, cumplimiento normativo y comercio internacional del sector minero-energético.</p>
+            <p class="text-brand-muted leading-relaxed">Visión corporativa global como director jurídico de D&amp;D
+              Explotación y Comercialización de Minerales S.A.S., liderando la estructuración legal, cumplimiento
+              normativo y comercio internacional del sector minero-energético.</p>
           </div>
         </div>
       </div>
@@ -758,7 +902,8 @@
 
       <!-- Section Header -->
       <div class="text-center mb-16 reveal-item">
-        <span class="inline-flex items-center gap-2 text-emerald-700 text-sm font-semibold tracking-widest uppercase mb-4">
+        <span
+          class="inline-flex items-center gap-2 text-emerald-700 text-sm font-semibold tracking-widest uppercase mb-4">
           <span class="w-8 h-px bg-emerald-700"></span>
           Escríbanos
           <span class="w-8 h-px bg-emerald-700"></span>
@@ -794,7 +939,8 @@
               </div>
               <div>
                 <h4 class="font-semibold text-emerald-950 text-sm">Cobertura</h4>
-                <p class="text-brand-muted text-sm">Operación local con despacho y representación a nivel nacional e internacional.</p>
+                <p class="text-brand-muted text-sm">Operación local con despacho y representación a nivel nacional e
+                  internacional.</p>
               </div>
             </div>
 
@@ -813,16 +959,11 @@
           <div class="relative rounded-2xl overflow-hidden border border-gray-200 shadow-sm" style="height: 280px;">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.365!2d-73.2511!3d10.4767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e8ab8f9c6e13d53%3A0x7b3b3b3b3b3b3b3b!2sValledupar%2C%20Cesar%2C%20Colombia!5e0!3m2!1ses!2sco!4v1700000000000"
-              width="100%"
-              height="100%"
-              style="border:0;"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              title="Ubicación D&D Grupo Empresarial en Valledupar"
-              class="w-full h-full"
-            ></iframe>
-            <div class="absolute bottom-3 left-3 bg-white/95 backdrop-blur-sm rounded-lg px-3 py-2 text-xs text-emerald-950 font-medium shadow-md">
+              width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade" title="Ubicación D&D Grupo Empresarial en Valledupar"
+              class="w-full h-full"></iframe>
+            <div
+              class="absolute bottom-3 left-3 bg-white/95 backdrop-blur-sm rounded-lg px-3 py-2 text-xs text-emerald-950 font-medium shadow-md">
               <i class="fas fa-map-marker-alt text-gold mr-1"></i> Valledupar, Cesar
             </div>
           </div>
@@ -837,63 +978,47 @@
             </div>
 
             <!-- Alerts -->
-            <div id="successAlert" class="hidden bg-emerald-50 border border-emerald-200 text-emerald-800 px-4 py-3 rounded-xl text-sm flex items-center gap-3">
+            <div id="successAlert"
+              class="hidden bg-emerald-50 border border-emerald-200 text-emerald-800 px-4 py-3 rounded-xl text-sm flex items-center gap-3">
               <i class="fas fa-check-circle text-emerald-600"></i>
               <span>¡Mensaje enviado correctamente! Nos comunicaremos con usted pronto.</span>
             </div>
-            <div id="errorAlert" class="hidden bg-red-50 border border-red-200 text-red-800 px-4 py-3 rounded-xl text-sm flex items-center gap-3">
+            <div id="errorAlert"
+              class="hidden bg-red-50 border border-red-200 text-red-800 px-4 py-3 rounded-xl text-sm flex items-center gap-3">
               <i class="fas fa-exclamation-triangle text-red-600"></i>
               <span>Error al enviar el mensaje. Intente nuevamente o contáctenos directamente.</span>
             </div>
 
             <!-- Name -->
             <div>
-              <label for="nombre" class="block text-sm font-medium text-emerald-950 mb-1.5">Nombre Completo <span class="text-red-500">*</span></label>
-              <input
-                type="text"
-                id="nombre"
-                name="nombre"
-                required
-                placeholder="Ej: Carlos Alberto Pérez"
-                class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-sm text-brand-dark placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-950/20 focus:border-emerald-950 transition-all"
-              />
+              <label for="nombre" class="block text-sm font-medium text-emerald-950 mb-1.5">Nombre Completo <span
+                  class="text-red-500">*</span></label>
+              <input type="text" id="nombre" name="nombre" required placeholder="Ej: Carlos Alberto Pérez"
+                class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-sm text-brand-dark placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-950/20 focus:border-emerald-950 transition-all" />
             </div>
 
             <!-- Email + Phone -->
             <div class="grid sm:grid-cols-2 gap-4">
               <div>
-                <label for="correo" class="block text-sm font-medium text-emerald-950 mb-1.5">Correo Electrónico <span class="text-red-500">*</span></label>
-                <input
-                  type="email"
-                  id="correo"
-                  name="correo"
-                  required
-                  placeholder="correo@ejemplo.com"
-                  class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-sm text-brand-dark placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-950/20 focus:border-emerald-950 transition-all"
-                />
+                <label for="correo" class="block text-sm font-medium text-emerald-950 mb-1.5">Correo Electrónico <span
+                    class="text-red-500">*</span></label>
+                <input type="email" id="correo" name="correo" required placeholder="correo@ejemplo.com"
+                  class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-sm text-brand-dark placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-950/20 focus:border-emerald-950 transition-all" />
               </div>
               <div>
                 <label for="telefono" class="block text-sm font-medium text-emerald-950 mb-1.5">Teléfono</label>
-                <input
-                  type="tel"
-                  id="telefono"
-                  name="telefono"
-                  placeholder="+57 300 000 0000"
-                  class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-sm text-brand-dark placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-950/20 focus:border-emerald-950 transition-all"
-                />
+                <input type="tel" id="telefono" name="telefono" placeholder="+57 300 000 0000"
+                  class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-sm text-brand-dark placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-950/20 focus:border-emerald-950 transition-all" />
               </div>
             </div>
 
             <!-- Unit Select -->
             <div>
-              <label for="unidad" class="block text-sm font-medium text-emerald-950 mb-1.5">Unidad de Interés <span class="text-red-500">*</span></label>
-              <select
-                id="unidad"
-                name="unidad"
-                required
+              <label for="unidad" class="block text-sm font-medium text-emerald-950 mb-1.5">Unidad de Interés <span
+                  class="text-red-500">*</span></label>
+              <select id="unidad" name="unidad" required
                 class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-sm text-brand-dark focus:outline-none focus:ring-2 focus:ring-emerald-950/20 focus:border-emerald-950 transition-all appearance-none"
-                style="background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 20 20%22 fill=%22%236B7280%22><path fill-rule=%22evenodd%22 d=%22M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z%22 clip-rule=%22evenodd%22/></svg>'); background-position: right 12px center; background-repeat: no-repeat; background-size: 16px;"
-              >
+                style="background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 20 20%22 fill=%22%236B7280%22><path fill-rule=%22evenodd%22 d=%22M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z%22 clip-rule=%22evenodd%22/></svg>'); background-position: right 12px center; background-repeat: no-repeat; background-size: 16px;">
                 <option value="" disabled selected>Seleccione una opción</option>
                 <option value="Bufete de Abogados">Bufete de Abogados (General)</option>
                 <option value="Propiedad Intelectual">Propiedad Intelectual y Derecho de Autor</option>
@@ -903,26 +1028,20 @@
 
             <!-- Message -->
             <div>
-              <label for="mensaje" class="block text-sm font-medium text-emerald-950 mb-1.5">Mensaje <span class="text-red-500">*</span></label>
-              <textarea
-                id="mensaje"
-                name="mensaje"
-                required
-                rows="4"
+              <label for="mensaje" class="block text-sm font-medium text-emerald-950 mb-1.5">Mensaje <span
+                  class="text-red-500">*</span></label>
+              <textarea id="mensaje" name="mensaje" required rows="4"
                 placeholder="Describa brevemente su necesidad legal o comercial..."
-                class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-sm text-brand-dark placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-950/20 focus:border-emerald-950 transition-all resize-none"
-              ></textarea>
+                class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-sm text-brand-dark placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-950/20 focus:border-emerald-950 transition-all resize-none"></textarea>
             </div>
 
             <!-- Submit Button -->
-            <button
-              type="submit"
-              id="submitBtn"
-              class="w-full flex items-center justify-center gap-2 bg-emerald-950 text-white py-3.5 px-6 rounded-xl font-semibold text-sm hover:bg-emerald-900 transition-all duration-300 shadow-lg shadow-emerald-950/20 disabled:opacity-60 disabled:cursor-not-allowed"
-            >
+            <button type="submit" id="submitBtn"
+              class="w-full flex items-center justify-center gap-2 bg-emerald-950 text-white py-3.5 px-6 rounded-xl font-semibold text-sm hover:bg-emerald-900 transition-all duration-300 shadow-lg shadow-emerald-950/20 disabled:opacity-60 disabled:cursor-not-allowed">
               <span id="btnText">Enviar Consulta</span>
               <span id="btnLoader" class="hidden">
-                <svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
+                  viewBox="0 0 24 24">
                   <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
                   <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path>
                 </svg>
@@ -954,10 +1073,13 @@
         <div>
           <div class="flex items-center gap-3 mb-4">
             <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" class="w-10 h-10">
-              <rect x="4" y="4" width="112" height="112" rx="4" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
-              <text x="20" y="82" font-family="Georgia, serif" font-weight="700" font-size="58" fill="rgba(255,255,255,0.4)">D</text>
+              <rect x="4" y="4" width="112" height="112" rx="4" fill="rgba(255,255,255,0.1)"
+                stroke="rgba(255,255,255,0.2)" stroke-width="2" />
+              <text x="20" y="82" font-family="Georgia, serif" font-weight="700" font-size="58"
+                fill="rgba(255,255,255,0.4)">D</text>
               <text x="44" y="88" font-family="Georgia, serif" font-weight="700" font-size="58" fill="white">D</text>
-              <text x="46" y="58" font-family="Georgia, serif" font-weight="600" font-size="20" fill="#D4AF37">&amp;</text>
+              <text x="46" y="58" font-family="Georgia, serif" font-weight="600" font-size="20"
+                fill="#D4AF37">&amp;</text>
             </svg>
             <div>
               <span class="block text-white font-bold text-sm tracking-wider">D&amp;D GRUPO EMPRESARIAL</span>
@@ -965,7 +1087,8 @@
             </div>
           </div>
           <p class="text-sm text-emerald-300/60 leading-relaxed max-w-xs">
-            Operación local con despacho y representación a nivel nacional e internacional en asuntos jurídicos y comercio minero-energético.
+            Operación local con despacho y representación a nivel nacional e internacional en asuntos jurídicos y
+            comercio minero-energético.
           </p>
         </div>
 
@@ -974,10 +1097,14 @@
           <h4 class="text-white font-semibold text-sm mb-4 tracking-wider uppercase">Navegación</h4>
           <ul class="space-y-2">
             <li><a href="#inicio" class="text-sm text-emerald-300/60 hover:text-gold transition-colors">Inicio</a></li>
-            <li><a href="#servicios-legales" class="text-sm text-emerald-300/60 hover:text-gold transition-colors">Servicios Legales</a></li>
-            <li><a href="#division-minera" class="text-sm text-emerald-300/60 hover:text-gold transition-colors">División Minera</a></li>
-            <li><a href="#trayectoria" class="text-sm text-emerald-300/60 hover:text-gold transition-colors">Trayectoria</a></li>
-            <li><a href="#contacto" class="text-sm text-emerald-300/60 hover:text-gold transition-colors">Contacto</a></li>
+            <li><a href="#servicios-legales"
+                class="text-sm text-emerald-300/60 hover:text-gold transition-colors">Servicios Legales</a></li>
+            <li><a href="#division-minera"
+                class="text-sm text-emerald-300/60 hover:text-gold transition-colors">División Minera</a></li>
+            <li><a href="#trayectoria"
+                class="text-sm text-emerald-300/60 hover:text-gold transition-colors">Trayectoria</a></li>
+            <li><a href="#contacto" class="text-sm text-emerald-300/60 hover:text-gold transition-colors">Contacto</a>
+            </li>
           </ul>
         </div>
 
@@ -987,7 +1114,8 @@
           <ul class="space-y-2 text-sm text-emerald-300/60">
             <li><i class="fas fa-building text-xs text-gold/60 mr-2"></i>D&amp;D Bufete de Abogados</li>
             <li><i class="fas fa-id-card text-xs text-gold/60 mr-2"></i>NIT: 900392652-8</li>
-            <li><i class="fas fa-industry text-xs text-gold/60 mr-2"></i>D&amp;D Explotación y Comercialización de Minerales S.A.S.</li>
+            <li><i class="fas fa-industry text-xs text-gold/60 mr-2"></i>D&amp;D Explotación y Comercialización de
+              Minerales S.A.S.</li>
             <li><i class="fas fa-map-pin text-xs text-gold/60 mr-2"></i>Calle 7A # 14-35, Valledupar</li>
           </ul>
         </div>
@@ -1001,7 +1129,9 @@
           </p>
           <!-- Social Icons -->
           <div class="flex items-center gap-4">
-            <a href="https://wa.me/573015608461?text=Hola,%20me%20gustaría%20recibir%20más%20información%20sobre%20sus%20servicios." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="w-9 h-9 flex items-center justify-center rounded-lg bg-emerald-800/30 text-emerald-400/60 hover:bg-gold/20 hover:text-gold transition-all">
+            <a href="https://wa.me/573015608461?text=Hola,%20me%20gustaría%20recibir%20más%20información%20sobre%20sus%20servicios."
+              target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"
+              class="w-9 h-9 flex items-center justify-center rounded-lg bg-emerald-800/30 text-emerald-400/60 hover:bg-gold/20 hover:text-gold transition-all">
               <i class="fab fa-whatsapp text-sm"></i>
             </a>
           </div>
@@ -1018,14 +1148,14 @@
     // ──────────────────────────────────────────────
     // Google Apps Script URL — REEMPLAZAR CON LA URL REAL
     // ──────────────────────────────────────────────
-    const scriptURL = 'TU_GOOGLE_SCRIPT_URL_AQUÍ';
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyxVc2RrE23ounBnqLgkZGz1oVkbSKt1_TTDumzBH27BIPpTXdjwogrjZW4rHXGPev_XA/exec';
 
     // ──────────────────────────────────────────────
     // Mobile Menu Toggle
     // ──────────────────────────────────────────────
-    const menuToggle  = document.getElementById('menuToggle');
-    const menuClose   = document.getElementById('menuClose');
-    const mobileMenu  = document.getElementById('mobileMenu');
+    const menuToggle = document.getElementById('menuToggle');
+    const menuClose = document.getElementById('menuClose');
+    const mobileMenu = document.getElementById('mobileMenu');
     const menuOverlay = document.getElementById('menuOverlay');
 
     function openMenu() {
@@ -1085,12 +1215,12 @@
     // ──────────────────────────────────────────────
     // Contact Form — Google Sheets Submission
     // ──────────────────────────────────────────────
-    const contactForm   = document.getElementById('contactForm');
-    const submitBtn     = document.getElementById('submitBtn');
-    const btnText       = document.getElementById('btnText');
-    const btnLoader     = document.getElementById('btnLoader');
-    const successAlert  = document.getElementById('successAlert');
-    const errorAlert    = document.getElementById('errorAlert');
+    const contactForm = document.getElementById('contactForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const btnText = document.getElementById('btnText');
+    const btnLoader = document.getElementById('btnLoader');
+    const successAlert = document.getElementById('successAlert');
+    const errorAlert = document.getElementById('errorAlert');
 
     contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
@@ -1163,4 +1293,5 @@
   </script>
 
 </body>
+
 </html>
