@@ -494,7 +494,7 @@
       </div>
 
       <!-- Specialties Grid -->
-      <div class="flex overflow-x-auto snap-x snap-mandatory no-scrollbar gap-4 pb-4 -mx-4 px-4 sm:mx-0 sm:px-0 sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-6 sm:overflow-visible sm:pb-0 mb-12">
+      <div id="carouselServicios" class="flex overflow-x-auto snap-x snap-mandatory no-scrollbar gap-4 pb-4 -mx-4 px-4 sm:mx-0 sm:px-0 sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-6 sm:overflow-visible sm:pb-0 mb-12">
 
         <!-- Derecho Penal -->
         <div class="card-lift reveal-item bg-white rounded-2xl p-8 border border-gray-100 shadow-sm group snap-center flex-shrink-0 w-[80vw] sm:w-auto">
@@ -700,7 +700,7 @@
       </div>
 
       <!-- Minerals Grid -->
-      <div class="flex overflow-x-auto snap-x snap-mandatory no-scrollbar gap-4 pb-4 -mx-4 px-4 sm:mx-auto sm:px-0 sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-8 sm:overflow-visible sm:pb-0 max-w-5xl">
+      <div id="carouselMinerales" class="flex overflow-x-auto snap-x snap-mandatory no-scrollbar gap-4 pb-4 -mx-4 px-4 sm:mx-auto sm:px-0 sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-8 sm:overflow-visible sm:pb-0 max-w-5xl">
 
         <!-- Carbón -->
         <div
@@ -1302,6 +1302,142 @@
     );
 
     sections.forEach((section) => navObserver.observe(section));
+
+    // ──────────────────────────────────────────────
+    // Carousel Autoplay (Mobile Only)
+    // ──────────────────────────────────────────────
+    (function () {
+      const AUTOPLAY_INTERVAL = 3500; // ms between slides
+      const PAUSE_AFTER_TOUCH = 6000; // ms to wait after user interaction before resuming
+      const isMobile = () => window.matchMedia('(max-width: 639px)').matches;
+
+      function initCarouselAutoplay(container) {
+        if (!container) return;
+
+        let timer = null;
+        let pauseTimer = null;
+        let currentIndex = 0;
+        let isPausedByUser = false;
+
+        function getCards() {
+          return Array.from(container.children).filter(
+            (el) => el.nodeType === 1 && el.classList.contains('snap-center')
+          );
+        }
+
+        function scrollToIndex(index) {
+          const cards = getCards();
+          if (!cards.length) return;
+          const target = cards[index];
+          if (!target) return;
+
+          // Calculate scroll position to center the card
+          const containerRect = container.getBoundingClientRect();
+          const targetRect = target.getBoundingClientRect();
+          const scrollLeft =
+            target.offsetLeft -
+            container.offsetLeft -
+            (containerRect.width / 2 - targetRect.width / 2);
+
+          container.scrollTo({ left: scrollLeft, behavior: 'smooth' });
+        }
+
+        function advanceSlide() {
+          if (!isMobile() || isPausedByUser) return;
+          const cards = getCards();
+          if (!cards.length) return;
+
+          currentIndex++;
+          if (currentIndex >= cards.length) {
+            currentIndex = 0;
+          }
+          scrollToIndex(currentIndex);
+        }
+
+        function startAutoplay() {
+          stopAutoplay();
+          if (!isMobile()) return;
+          timer = setInterval(advanceSlide, AUTOPLAY_INTERVAL);
+        }
+
+        function stopAutoplay() {
+          if (timer) {
+            clearInterval(timer);
+            timer = null;
+          }
+        }
+
+        function pauseByUser() {
+          isPausedByUser = true;
+          stopAutoplay();
+
+          // Clear any existing resume timer
+          if (pauseTimer) clearTimeout(pauseTimer);
+
+          // Resume autoplay after inactivity
+          pauseTimer = setTimeout(() => {
+            isPausedByUser = false;
+            // Sync currentIndex to wherever the user scrolled
+            const cards = getCards();
+            if (cards.length) {
+              const containerCenter =
+                container.scrollLeft + container.offsetWidth / 2;
+              let closestIdx = 0;
+              let closestDist = Infinity;
+              cards.forEach((card, i) => {
+                const cardCenter = card.offsetLeft + card.offsetWidth / 2;
+                const dist = Math.abs(containerCenter - cardCenter);
+                if (dist < closestDist) {
+                  closestDist = dist;
+                  closestIdx = i;
+                }
+              });
+              currentIndex = closestIdx;
+            }
+            startAutoplay();
+          }, PAUSE_AFTER_TOUCH);
+        }
+
+        // Pause on touch interaction
+        container.addEventListener('touchstart', pauseByUser, { passive: true });
+        container.addEventListener('touchmove', pauseByUser, { passive: true });
+
+        // Pause on manual scroll (mouse wheel or pointer drag)
+        let scrollTimeout = null;
+        container.addEventListener('scroll', () => {
+          if (!isPausedByUser && timer) {
+            // Only pause if a timer is running (autoplay is active)
+            // and this scroll wasn't triggered by our own scrollTo
+          }
+        }, { passive: true });
+
+        // Pause on mouse interaction (desktop-like touch on hybrid devices)
+        container.addEventListener('mousedown', pauseByUser);
+
+        // Handle viewport resize — disable on desktop, re-enable on mobile
+        const mql = window.matchMedia('(max-width: 639px)');
+        function handleViewportChange(e) {
+          if (e.matches) {
+            isPausedByUser = false;
+            startAutoplay();
+          } else {
+            stopAutoplay();
+            // Reset scroll position on desktop
+            container.scrollTo({ left: 0, behavior: 'auto' });
+          }
+        }
+        mql.addEventListener('change', handleViewportChange);
+
+        // Initial start
+        if (isMobile()) {
+          startAutoplay();
+        }
+      }
+
+      // Initialize both carousels
+      initCarouselAutoplay(document.getElementById('carouselServicios'));
+      initCarouselAutoplay(document.getElementById('carouselMinerales'));
+    })();
   </script>
 
 </body>
