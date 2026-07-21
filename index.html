@@ -928,99 +928,87 @@
         </p>
       </div>
 
-      <!-- 2-Column Layout -->
-      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16">
+      <!-- ═══ MOBILE-FIRST CRO LAYOUT ═══ -->
+      <!-- flex-col on mobile with order utilities, 2-col grid on desktop -->
+      <div class="flex flex-col gap-8 lg:grid lg:grid-cols-2 lg:gap-16">
 
-        <!-- Left Column: Info + Map -->
-        <div class="reveal-item space-y-8">
-          <!-- Contact Info Cards -->
-          <div class="space-y-4">
-            <div class="flex items-start gap-4 bg-brand-bg rounded-xl p-5">
-              <div class="w-11 h-11 bg-emerald-950 rounded-lg flex items-center justify-center shrink-0">
-                <i class="fas fa-location-dot text-white text-sm"></i>
-              </div>
-              <div>
-                <h4 class="font-semibold text-emerald-950 text-sm">Dirección</h4>
-                <p class="text-brand-muted text-sm">Calle 7A # 14-35, Valledupar – Cesar, Colombia</p>
-              </div>
-            </div>
+        <!-- ────────────────────────────────────────── -->
+        <!-- BLOQUE 1: CANALES DIRECTOS (First Fold)   -->
+        <!-- On mobile: appears FIRST. On desktop: left column top -->
+        <!-- ────────────────────────────────────────── -->
+        <div class="order-1 lg:order-1 reveal-item">
+          <div class="space-y-3">
+            <!-- Section micro-label -->
+            <p class="text-xs font-semibold text-emerald-700 tracking-widest uppercase mb-1 flex items-center gap-2">
+              <i class="fas fa-bolt text-gold text-[10px]"></i>
+              Contacto Directo
+            </p>
 
-            <div class="flex items-start gap-4 bg-brand-bg rounded-xl p-5">
-              <div class="w-11 h-11 bg-emerald-950 rounded-lg flex items-center justify-center shrink-0">
-                <i class="fas fa-globe text-white text-sm"></i>
-              </div>
-              <div>
-                <h4 class="font-semibold text-emerald-950 text-sm">Cobertura</h4>
-                <p class="text-brand-muted text-sm">Operación local con despacho y representación a nivel nacional e
-                  internacional.</p>
-              </div>
-            </div>
-
-            <div class="flex items-start gap-4 bg-brand-bg rounded-xl p-5">
-              <div class="w-11 h-11 bg-gold rounded-lg flex items-center justify-center shrink-0">
-                <i class="fas fa-clock text-emerald-950 text-sm"></i>
-              </div>
-              <div>
-                <h4 class="font-semibold text-emerald-950 text-sm">Horario de Atención</h4>
-                <p class="text-brand-muted text-sm">Lunes a Viernes: 8:00 AM – 6:00 PM | Sábados con cita previa.</p>
-              </div>
-            </div>
-
+            <!-- WhatsApp / Teléfono — PRIMARY CTA -->
             <a href="https://wa.me/573015608461?text=Hola,%20me%20gustaría%20recibir%20más%20información%20sobre%20sus%20servicios."
               target="_blank" rel="noopener noreferrer"
-              class="flex items-start gap-4 bg-emerald-950/5 hover:bg-emerald-950/10 rounded-xl p-5 transition-colors group">
-              <div class="w-11 h-11 bg-emerald-700 rounded-lg flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
-                <i class="fab fa-whatsapp text-white text-lg"></i>
+              class="flex items-center gap-4 bg-emerald-950 hover:bg-emerald-900 text-white rounded-2xl p-4 sm:p-5 transition-all duration-300 group shadow-lg shadow-emerald-950/20 active:scale-[0.98]"
+              style="min-height: 64px;">
+              <div class="w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-md shadow-green-500/30">
+                <i class="fab fa-whatsapp text-white text-xl"></i>
               </div>
-              <div>
-                <h4 class="font-semibold text-emerald-950 text-sm">Teléfono / WhatsApp</h4>
+              <div class="flex-1 min-w-0">
+                <h4 class="font-semibold text-sm sm:text-base leading-tight">Escribir por WhatsApp</h4>
+                <p class="text-emerald-200 text-sm font-medium">+57 301 560 8461</p>
+              </div>
+              <i class="fas fa-arrow-right text-emerald-400 text-sm group-hover:translate-x-1 transition-transform"></i>
+            </a>
+
+            <!-- Llamar por teléfono -->
+            <a href="tel:+573015608461"
+              class="flex items-center gap-4 bg-white hover:bg-emerald-50 border border-gray-200 hover:border-emerald-200 rounded-2xl p-4 sm:p-5 transition-all duration-300 group active:scale-[0.98]"
+              style="min-height: 56px;">
+              <div class="w-12 h-12 bg-emerald-700 rounded-xl flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                <i class="fas fa-phone text-white text-sm"></i>
+              </div>
+              <div class="flex-1 min-w-0">
+                <h4 class="font-semibold text-emerald-950 text-sm leading-tight">Llamar Ahora</h4>
                 <p class="text-emerald-700 text-sm font-medium">+57 301 560 8461</p>
-                <p class="text-brand-muted text-xs mt-0.5">Toque para llamar o escribir por WhatsApp</p>
               </div>
+              <i class="fas fa-phone-volume text-emerald-400 text-xs group-hover:animate-pulse"></i>
             </a>
 
+            <!-- Correo Bufete -->
             <a href="mailto:darioasesorjuridico1@hotmail.com"
-              class="flex items-start gap-4 bg-emerald-950/5 hover:bg-emerald-950/10 rounded-xl p-5 transition-colors group">
-              <div class="w-11 h-11 bg-gold-dark rounded-lg flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+              class="flex items-center gap-4 bg-white hover:bg-gold-50 border border-gray-200 hover:border-gold/40 rounded-2xl p-4 sm:p-5 transition-all duration-300 group active:scale-[0.98]"
+              style="min-height: 56px;">
+              <div class="w-12 h-12 bg-gold-dark rounded-xl flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
                 <i class="fas fa-envelope text-white text-sm"></i>
               </div>
-              <div>
-                <h4 class="font-semibold text-emerald-950 text-sm">Correo — Bufete de Abogados</h4>
-                <p class="text-emerald-700 text-sm font-medium">darioasesorjuridico1@hotmail.com</p>
-                <p class="text-brand-muted text-xs mt-0.5">Consultas jurídicas y asesoría legal</p>
+              <div class="flex-1 min-w-0">
+                <h4 class="font-semibold text-emerald-950 text-sm leading-tight">Correo — Bufete de Abogados</h4>
+                <p class="text-emerald-700 text-xs sm:text-sm font-medium truncate">darioasesorjuridico1@hotmail.com</p>
               </div>
+              <i class="fas fa-arrow-right text-gray-300 text-xs group-hover:text-gold group-hover:translate-x-1 transition-all"></i>
             </a>
 
+            <!-- Correo Minería -->
             <a href="mailto:ddcomercializacionyexplotacion@gmail.com"
-              class="flex items-start gap-4 bg-emerald-950/5 hover:bg-emerald-950/10 rounded-xl p-5 transition-colors group">
-              <div class="w-11 h-11 bg-emerald-800 rounded-lg flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+              class="flex items-center gap-4 bg-white hover:bg-emerald-50 border border-gray-200 hover:border-emerald-200 rounded-2xl p-4 sm:p-5 transition-all duration-300 group active:scale-[0.98]"
+              style="min-height: 56px;">
+              <div class="w-12 h-12 bg-emerald-800 rounded-xl flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
                 <i class="fas fa-envelope text-white text-sm"></i>
               </div>
-              <div>
-                <h4 class="font-semibold text-emerald-950 text-sm">Correo — D&amp;D Minería y Comercio</h4>
-                <p class="text-emerald-700 text-sm font-medium">ddcomercializacionyexplotacion@gmail.com</p>
-                <p class="text-brand-muted text-xs mt-0.5">Comercio minero y consultas empresariales</p>
+              <div class="flex-1 min-w-0">
+                <h4 class="font-semibold text-emerald-950 text-sm leading-tight">Correo — D&amp;D Minería y Comercio</h4>
+                <p class="text-emerald-700 text-xs sm:text-sm font-medium truncate">ddcomercializacionyexplotacion@gmail.com</p>
               </div>
+              <i class="fas fa-arrow-right text-gray-300 text-xs group-hover:text-emerald-600 group-hover:translate-x-1 transition-all"></i>
             </a>
-          </div>
-
-          <!-- Map Placeholder -->
-          <div class="relative rounded-2xl overflow-hidden border border-gray-200 shadow-sm" style="height: 280px;">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.365!2d-73.2511!3d10.4767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e8ab8f9c6e13d53%3A0x7b3b3b3b3b3b3b3b!2sValledupar%2C%20Cesar%2C%20Colombia!5e0!3m2!1ses!2sco!4v1700000000000"
-              width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade" title="Ubicación D&D Grupo Empresarial en Valledupar"
-              class="w-full h-full"></iframe>
-            <div
-              class="absolute bottom-3 left-3 bg-white/95 backdrop-blur-sm rounded-lg px-3 py-2 text-xs text-emerald-950 font-medium shadow-md">
-              <i class="fas fa-map-marker-alt text-gold mr-1"></i> Valledupar, Cesar
-            </div>
           </div>
         </div>
 
-        <!-- Right Column: Contact Form -->
-        <div class="reveal-item">
-          <form id="contactForm" class="bg-brand-bg rounded-2xl p-8 border border-gray-100 shadow-sm space-y-5">
+        <!-- ────────────────────────────────────────── -->
+        <!-- BLOQUE 2: FORMULARIO DE CONSULTA          -->
+        <!-- On mobile: appears SECOND. On desktop: right column -->
+        <!-- ────────────────────────────────────────── -->
+        <div class="order-2 lg:order-2 lg:row-span-2 reveal-item">
+          <form id="contactForm" class="bg-brand-bg rounded-2xl p-6 sm:p-8 border border-gray-100 shadow-sm space-y-5 lg:sticky lg:top-28">
             <div>
               <h3 class="font-display text-xl font-bold text-emerald-950 mb-1">Formulario de Consulta</h3>
               <p class="text-sm text-brand-muted">Complete los datos para recibir atención personalizada.</p>
@@ -1043,7 +1031,7 @@
               <label for="nombre" class="block text-sm font-medium text-emerald-950 mb-1.5">Nombre Completo <span
                   class="text-red-500">*</span></label>
               <input type="text" id="nombre" name="nombre" required placeholder="Ej: Carlos Alberto Pérez"
-                class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-sm text-brand-dark placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-950/20 focus:border-emerald-950 transition-all" />
+                class="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-white text-base text-brand-dark placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-950/20 focus:border-emerald-950 transition-all" />
             </div>
 
             <!-- Email + Phone -->
@@ -1052,12 +1040,12 @@
                 <label for="correo" class="block text-sm font-medium text-emerald-950 mb-1.5">Correo Electrónico <span
                     class="text-red-500">*</span></label>
                 <input type="email" id="correo" name="correo" required placeholder="correo@ejemplo.com"
-                  class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-sm text-brand-dark placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-950/20 focus:border-emerald-950 transition-all" />
+                  class="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-white text-base text-brand-dark placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-950/20 focus:border-emerald-950 transition-all" />
               </div>
               <div>
                 <label for="telefono" class="block text-sm font-medium text-emerald-950 mb-1.5">Teléfono</label>
                 <input type="tel" id="telefono" name="telefono" placeholder="+57 300 000 0000"
-                  class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-sm text-brand-dark placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-950/20 focus:border-emerald-950 transition-all" />
+                  class="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-white text-base text-brand-dark placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-950/20 focus:border-emerald-950 transition-all" />
               </div>
             </div>
 
@@ -1066,7 +1054,7 @@
               <label for="unidad" class="block text-sm font-medium text-emerald-950 mb-1.5">Unidad de Interés <span
                   class="text-red-500">*</span></label>
               <select id="unidad" name="unidad" required
-                class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-sm text-brand-dark focus:outline-none focus:ring-2 focus:ring-emerald-950/20 focus:border-emerald-950 transition-all appearance-none"
+                class="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-white text-base text-brand-dark focus:outline-none focus:ring-2 focus:ring-emerald-950/20 focus:border-emerald-950 transition-all appearance-none"
                 style="background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 20 20%22 fill=%22%236B7280%22><path fill-rule=%22evenodd%22 d=%22M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z%22 clip-rule=%22evenodd%22/></svg>'); background-position: right 12px center; background-repeat: no-repeat; background-size: 16px;">
                 <option value="" disabled selected>Seleccione una opción</option>
                 <option value="Bufete de Abogados">Bufete de Abogados (General)</option>
@@ -1081,13 +1069,14 @@
                   class="text-red-500">*</span></label>
               <textarea id="mensaje" name="mensaje" required rows="4"
                 placeholder="Describa brevemente su necesidad legal o comercial..."
-                class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-sm text-brand-dark placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-950/20 focus:border-emerald-950 transition-all resize-none"></textarea>
+                class="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-white text-base text-brand-dark placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-950/20 focus:border-emerald-950 transition-all resize-none"></textarea>
             </div>
 
             <!-- Submit Button -->
             <button type="submit" id="submitBtn"
-              class="w-full flex items-center justify-center gap-2 bg-emerald-950 text-white py-3.5 px-6 rounded-xl font-semibold text-sm hover:bg-emerald-900 transition-all duration-300 shadow-lg shadow-emerald-950/20 disabled:opacity-60 disabled:cursor-not-allowed">
-              <span id="btnText">Enviar Consulta</span>
+              class="w-full flex items-center justify-center gap-2 bg-emerald-950 text-white py-4 px-6 rounded-xl font-semibold text-base hover:bg-emerald-900 transition-all duration-300 shadow-lg shadow-emerald-950/20 disabled:opacity-60 disabled:cursor-not-allowed active:scale-[0.98]"
+              style="min-height: 52px;">
+              <span id="btnText"><i class="fas fa-paper-plane mr-1 text-sm"></i> Enviar Consulta</span>
               <span id="btnLoader" class="hidden">
                 <svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
                   viewBox="0 0 24 24">
@@ -1103,6 +1092,67 @@
               Sus datos están protegidos y no serán compartidos con terceros.
             </p>
           </form>
+        </div>
+
+        <!-- ────────────────────────────────────────── -->
+        <!-- BLOQUE 3: DATOS INFORMATIVOS + MAPA       -->
+        <!-- On mobile: appears THIRD. On desktop: left column bottom -->
+        <!-- ────────────────────────────────────────── -->
+        <div class="order-3 lg:order-3 reveal-item space-y-4">
+          <!-- Micro-label -->
+          <p class="text-xs font-semibold text-emerald-700 tracking-widest uppercase mb-1 flex items-center gap-2">
+            <i class="fas fa-building text-emerald-600 text-[10px]"></i>
+            Ubicación y Horario
+          </p>
+
+          <!-- Dirección -->
+          <div class="flex items-center gap-4 bg-brand-bg rounded-xl p-4 sm:p-5" style="min-height: 56px;">
+            <div class="w-11 h-11 bg-emerald-950 rounded-lg flex items-center justify-center shrink-0">
+              <i class="fas fa-location-dot text-white text-sm"></i>
+            </div>
+            <div>
+              <h4 class="font-semibold text-emerald-950 text-sm">Dirección</h4>
+              <p class="text-brand-muted text-sm">Calle 7A # 14-35, Valledupar – Cesar, Colombia</p>
+            </div>
+          </div>
+
+          <!-- Horario -->
+          <div class="flex items-center gap-4 bg-brand-bg rounded-xl p-4 sm:p-5" style="min-height: 56px;">
+            <div class="w-11 h-11 bg-gold rounded-lg flex items-center justify-center shrink-0">
+              <i class="fas fa-clock text-emerald-950 text-sm"></i>
+            </div>
+            <div>
+              <h4 class="font-semibold text-emerald-950 text-sm">Horario de Atención</h4>
+              <p class="text-brand-muted text-sm">Lunes a Viernes: 8:00 AM – 6:00 PM | Sábados con cita previa.</p>
+            </div>
+          </div>
+
+          <!-- Cobertura -->
+          <div class="flex items-center gap-4 bg-brand-bg rounded-xl p-4 sm:p-5" style="min-height: 56px;">
+            <div class="w-11 h-11 bg-emerald-950 rounded-lg flex items-center justify-center shrink-0">
+              <i class="fas fa-globe text-white text-sm"></i>
+            </div>
+            <div>
+              <h4 class="font-semibold text-emerald-950 text-sm">Cobertura</h4>
+              <p class="text-brand-muted text-sm">Operación local con representación a nivel nacional e internacional.</p>
+            </div>
+          </div>
+
+          <!-- Map -->
+          <div class="relative rounded-2xl overflow-hidden border border-gray-200 shadow-sm mt-2" style="height: 260px;">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.365!2d-73.2511!3d10.4767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e8ab8f9c6e13d53%3A0x7b3b3b3b3b3b3b3b!2sValledupar%2C%20Cesar%2C%20Colombia!5e0!3m2!1ses!2sco!4v1700000000000"
+              width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade" title="Ubicación D&D Grupo Empresarial en Valledupar"
+              class="w-full h-full"></iframe>
+            <div
+              class="absolute bottom-3 left-3 bg-white/95 backdrop-blur-sm rounded-lg px-3 py-2 text-xs text-emerald-950 font-medium shadow-md">
+              <i class="fas fa-map-marker-alt text-gold mr-1"></i> Valledupar, Cesar
+            </div>
+          </div>
+
+          <!-- Bottom spacer to avoid floating WhatsApp button overlap on mobile -->
+          <div class="h-4 lg:hidden"></div>
         </div>
       </div>
     </div>
@@ -1217,9 +1267,9 @@
   <!-- ═══════════════════════════════════════════════ -->
   <a href="https://wa.me/573015608461?text=Hola,%20me%20gustaría%20recibir%20más%20información%20sobre%20sus%20servicios."
     target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp"
-    class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-green-500 hover:bg-green-600 text-white rounded-full flex items-center justify-center shadow-lg shadow-green-500/30 hover:scale-110 transition-all duration-300 animate-pulse-gold"
-    style="animation: pulseGold 2s ease-in-out infinite;">
-    <i class="fab fa-whatsapp text-2xl"></i>
+    class="fixed bottom-5 right-4 sm:bottom-6 sm:right-6 z-40 w-14 h-14 sm:w-16 sm:h-16 bg-green-500 hover:bg-green-600 active:bg-green-700 text-white rounded-full flex items-center justify-center shadow-xl shadow-green-600/40 hover:scale-110 active:scale-95 transition-all duration-300"
+    style="margin-bottom: env(safe-area-inset-bottom, 0px);">
+    <i class="fab fa-whatsapp text-2xl sm:text-3xl"></i>
   </a>
 
 
